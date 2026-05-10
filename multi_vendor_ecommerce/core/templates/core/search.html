@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+{% if products %}
+    <h3>Result for "{{ query }}"</h3>
+    <ul>
+        {% for product in products %}
+        <div>
+            <img src="{{product.image.url}}" width="150">
+            <h4>{{product.name}}</h4>
+            <h5>{{product.price}}</h5>
+            
+        </div>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No Products Found.</p>
+    {% endif %}
+{% endblock %}
