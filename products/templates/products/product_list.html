@@ -1,0 +1,45 @@
+{% block content %}
+<h2>Product List</h2>
+<a href="{% url 'add_products' %}" class="btn">Add Products</a><br><br>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stocks</th>
+        <th>Category</th>
+        <th>Image</th>
+        <th>Action</th>
+    </tr>
+
+    {% for pr in products %}
+    <tr>
+        <td>{{ pr.name }}</td>
+        <td>{{ pr.price }}</td>
+        <td>{{ pr.stock }}</td>
+        <td>{{ pr.category }}</td>
+
+        <td>
+            {% if pr.image %}
+                <img src="{{ pr.image.url }}" alt="{{ pr.name }}" width="50">
+            {% endif %}
+        </td>
+
+        <td>
+            <form action="{% url 'edit_product' pr.id %}" method="get" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn">
+                    Edit
+                </button>
+            </form>
+            <form action="{% url 'delete_product' pr.id %}" method="POST" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn" onclick="return confirm('Are you sure?');">
+                    Delete
+                </button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

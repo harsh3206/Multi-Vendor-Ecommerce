@@ -1,0 +1,39 @@
+{% block content %}
+<h2>Edit Products</h2>
+    
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>
+        <label>Name</label>
+        <input name="name" type="text" value="{{ product.name }}" required>
+    </div>
+    <div>
+        <label>Price</label>
+        <input name="price" type="number" value="{{ product.price }}" required>
+    </div>
+    <div>
+        <label>Description</label>
+        <textarea name="description">{{ product.description }}</textarea>
+    </div>
+    <div>
+        <label>Stock</label>
+        <input name="stock" type="number" value="{{ product.stock }}" required>
+    </div>
+    <div>
+        <label>Category</label>
+        <select name="category">
+    {% for cat in categories %}
+        <option value="{{ cat.id }}"
+            {% if cat.id == product.category.id %}selected{% endif %}>
+            {{ cat.name }}
+        </option>
+    {% endfor %}
+</select>
+    </div>
+    <div>
+        <label>Image</label>
+        <input type="file" name="image">
+    </div>
+    <button type="submit">Edit Product</button>
+</form>
+{% endblock %}
