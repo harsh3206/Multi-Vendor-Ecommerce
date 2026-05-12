@@ -1,0 +1,71 @@
+/* Base Theme */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4fff6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Heading */
+h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.product-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-table th {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.product-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Row Styles */
+.product-table tr:nth-child(even) {
+    background-color: #f1fdf3;
+}
+
+.product-table tr:hover {
+    background-color: #d7f5dc;
+    transition: 0.2s ease;
+}
+
+/* Empty Message */
+.empty-message {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #388e3c;
+}

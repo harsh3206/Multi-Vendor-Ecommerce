@@ -1,0 +1,122 @@
+body {
+    background: #f0fdf4; /* very light green */
+    font-family: 'Segoe UI', sans-serif;
+    color: #064e3b;
+    margin: 0;
+}
+
+/* Container */
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+/* Card */
+.dashboard-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #bbf7d0;
+}
+
+/* Text */
+.welcome-text,
+.shop-name,
+.status-text {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Highlight text */
+.welcome-text {
+    color: #16a34a;
+}
+
+/* Status */
+.approved {
+    color: #15803d;
+    font-weight: 500;
+}
+
+.pending {
+    color: #65a30d;
+    font-weight: 500;
+}
+
+/* Menu */
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.menu-item {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    background: #dcfce7;
+    color: #064e3b;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.menu-item:hover {
+    background: #bbf7d0;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-logout,
+.btn-primary {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Logout */
+.btn-logout {
+    background: #dc2626;
+    color: white;
+}
+
+.btn-logout:hover {
+    background: #b91c1c;
+}
+
+/* Primary */
+.btn-primary {
+    background: #16a34a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #15803d;
+}
+
+/* Divider */
+hr {
+    border: none;
+    height: 1px;
+    background: #bbf7d0;
+    margin: 15px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .button-group {
+        flex-direction: column;
+    }
+}
