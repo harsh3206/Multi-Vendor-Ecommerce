@@ -1,27 +1,5 @@
-# Python
-__pycache__/
-*.py[cod]
-*.sqlite3
-*.log
-
-# Virtual Environment
 venv/
-env/
-.venv/
-
-# Django
-media/
-staticfiles/
-
-# Environment Variables
+__pycache__/
+db.sqlite3
 .env
-
-# VS Code
-.vscode/
-
-# PyCharm
-.idea/
-
-# OS files
-.DS_Store
-Thumbs.db
+staticfiles/
