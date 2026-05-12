@@ -1,0 +1,42 @@
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'products/css/add_products.css' %}">
+
+<div class="add-product-container">
+
+    <div class="form-card">
+
+        <h1 class="user-name">Welcome, {{ request.user.username }}</h1>
+        <h2 class="form-title">Add Product</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <input name="name" type="text" placeholder="Product Name" required>
+
+            <input name="price" type="number" placeholder="Price (₹)" required>
+
+            <textarea name="description" placeholder="Description"></textarea>
+
+            <input name="stock" type="number" placeholder="Stock Quantity" required>
+
+            <!-- 🔥 UPDATED: Subcategory Dropdown -->
+            <select name="subcategory" required>
+                <option value="">Select Subcategory</option>
+
+                {% for sub in subcategories %}
+                    <option value="{{ sub.id }}">{{ sub.name }}</option>
+                {% endfor %}
+            </select>
+
+            <input type="file" name="image">
+
+            <button type="submit" class="btn-submit">Add Product</button>
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

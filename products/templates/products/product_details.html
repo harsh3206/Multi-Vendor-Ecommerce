@@ -1,0 +1,58 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'products/css/product_detail.css' %}">
+
+<div class="product-container">
+
+    <!-- Product Image -->
+    <div class="product-image">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}" width="100%">
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-info">
+
+        <h2 class="product-title">{{ product.name }}</h2>
+
+        <h3 class="product-price">₹{{ product.price }}</h3>
+
+        <p class="product-category">
+            <b>Category:</b> {{ product.category.name }}
+        </p>
+        <b>Description:</b>{{ product.description }}
+
+        <p class="product-stock">
+            <b>Status:</b>
+            {% if product.stock > 0 %}
+                <span class="in-stock">In Stock</span>
+            {% else %}
+                <span class="out-stock">Out of Stock</span>
+            {% endif %}
+        </p>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+
+    {% if product.stock > 0 %}
+
+        <a href="{% url 'cart:add_to_cart' product.id %}" class="btn btn-cart">
+            Add to Cart
+        </a>
+
+        <a href="{% url 'cart:buy_now' product.id %}" class="btn btn-buy">
+            Buy Now
+        </a>
+
+    {% else %}
+        <button class="btn btn-disabled" disabled>Out of Stock</button>
+    {% endif %}
+
+</div>
+    </div>
+
+</div>
+
+{% endblock %}
