@@ -1,0 +1,32 @@
+[33m7ac31a4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Resolve merge conflicts
+[33mb899ed8[m remove
+[33mfada761[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Remove Duplicate Folders
+[33m5c8c6b0[m remove
+[33me55a380[m load_data commit
+[33m3b3e347[m Merge branch 'main' of https://github.com/harsh3206/Multi-Vendor-Ecommerce
+[33m16f0de7[m fix project structure and prepare deployment
+[33m1e2de6b[m fix project structure and prepare deployment
+[33m21234d5[m add initial data
+[33m258d856[m Merge branch 'main' of https://github.com/harsh3206/Multi-Vendor-Ecommerce
+[33m46c5687[m recommit
+[33m2d5d5d9[m update
+[33ma19dc86[m backup data for deployment
+[33m7799b87[m Merge branch 'main' of https://github.com/harsh3206/Multi-Vendor-Ecommerce
+[33me2ffed3[m again com
+[33me356fc6[m backup data
+[33me45ca3a[m fix project sync and build.sh
+[33m1a83718[m fix build.sh format for render
+[33mc174ed7[m first deploy
+[33mc165cb4[m fix build.sh
+[33maf420ee[m another move
+[33m6beedd5[m move done
+[33mfdeb496[m again
+[33m8614ab1[m again committ
+[33m0d2e864[m[33m ([m[1;31morigin/master[m[33m)[m first deploy
+[33mb7d1b34[m remove pygame for render deploy
+[33m9f94420[m recreated build.sh
+[33m6bf792d[m added build.sh
+[33mc61197b[m commit success
+[33m98e0cad[m commit
+[33m671a880[m added gunicorn
+[33ma99c1b4[m Initial commit

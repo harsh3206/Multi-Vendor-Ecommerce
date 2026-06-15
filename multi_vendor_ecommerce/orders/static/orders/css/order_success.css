@@ -1,0 +1,75 @@
+/* BODY */
+body {
+    background-color: #f4faff;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+/* CENTER CONTAINER */
+.success-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.success-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* TITLE */
+.success-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2e7d32; /* green success tone */
+}
+
+/* ORDER INFO */
+.order-id {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.order-total {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #1976d2;
+    font-weight: 600;
+}
+
+/* BUTTON */
+.btn-orders {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    background: #2196f3;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-orders:hover {
+    background: #1976d2;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
